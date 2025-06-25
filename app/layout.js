@@ -65,15 +65,15 @@ useEffect(() => {
                 <p className='font-bold'>🚀Adam Firdaus</p>
               </div>
               <nav className="flex gap-6 text-gray-600 dark:text-gray-300 text-sm">
-                <a href="#home" className={activeSection === 'home' ? 'font-bold text-violet-500' : ''}>Home</a>
-                <a href="#portfolio" className={activeSection === 'portfolio' ? 'font-bold text-violet-500' : ''}>Portfolio</a>
-                <a href="#works" className={activeSection === 'works' ? 'font-bold text-violet-500' : ''}>Works</a>
+                <a href="#home" className={activeSection === 'home' ? 'font-bold text-pink-500' : ''}>Home</a>
+                <a href="#works" className={activeSection === 'works' ? 'font-bold text-pink-500' : ''}>Works</a>
+                <a href="#otw" className={activeSection === 'otw' ? 'font-bold text-pink-500' : ''}>On The Web</a>
               </nav>
 
             </div>
             <button
               onClick={toggleTheme}
-              className="text-md border-none px-3 py-3 rounded-lg bg-violet-500 dark:bg-orange-300 hover:bg-gray-200 dark:hover:bg-zinc-800 transition"
+              className="text-md border-none px-3 py-3 rounded-lg bg-pink-500 dark:bg-violet-300 hover:bg-gray-200 dark:hover:bg-zinc-800 transition"
             >
               {theme === 'light' ? '🌙' : '☀️'}
             </button>
