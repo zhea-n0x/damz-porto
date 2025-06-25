@@ -117,7 +117,7 @@ export default function Home() {
     <main className="max-w-4xl mx-auto px-6">
       <section id="home">
         <div className="flex justify-center">
-          <Image src={Img} className="w-96 h-96 rounded-full bg-gray-300 dark:bg-gray-600 border-4 border-pink-500 dark:border-white content-center" />
+          <Image src={Img} className="h-96 rounded-full bg-gray-300 dark:bg-gray-600 border-4 border-pink-500 dark:border-white content-center" />
         </div>
         <p className='bg-pink-500 text-white py-3 text-center rounded-md my-6'>Hello, I'm Adam. Tech Geek based in Batam!</p>
         <div className="flex items-center gap-4 mb-3 justify-between">
