@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import Img from "../public/img/profile.png";
+import Img from "../public/img/new.jpg";
 import Img2 from "../public/img/avatar.png";
 
 export default function Home() {
@@ -87,7 +87,16 @@ export default function Home() {
         iconUrls.bootstrap
       ],
       "workedYear": "2022"
-    }
+    },
+    {
+      "title": "(Work In Progress) PT. AFH DWIMITRA",
+      "img": "afhdwimitra.png",
+      "desc": "Company Profile for PT. AFH DWIMITRA",
+      "techStack": [
+        iconUrls.tailwind
+      ],
+      "workedYear": "2025"
+    },
   ];
 
   const collab = [
@@ -105,6 +114,17 @@ export default function Home() {
       ],
       "workedYear": "2023-2024"
     },
+    {
+      "title": "LaporPak - RT/RW Administration Management Application",
+      "img": "laporpak.jpg",
+      "desc": "LaporPak is an application that simplifies administration within the community, specifically RT/RW, such as creating letters and announcing information about residents.",
+      "techStack": [
+        iconUrls.codeigniter,
+        iconUrls.bootstrap,
+        iconUrls.sql
+      ],
+      "workedYear": "2021"
+    },
   ]
 
   useEffect(() => {
@@ -117,8 +137,16 @@ export default function Home() {
     <main className="max-w-4xl mx-auto px-6">
       <section id="home">
         <div className="flex justify-center">
-          <Image src={Img} className="w-96 h-96 rounded-full bg-gray-300 dark:bg-gray-600 border-4 border-pink-500 dark:border-white content-center" />
+          <Image
+            src={Img}
+            alt="Profile"
+            className="rounded-full object-cover border-4 
+               border-pink-500 dark:border-white
+               bg-gray-300 dark:bg-gray-600
+               w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80"
+          />
         </div>
+
         <p className='bg-pink-500 text-white py-3 text-center rounded-md my-6'>Hello, I'm Adam. Tech Geek based in Batam!</p>
         <div className="flex items-center gap-4 mb-3 justify-between">
           {/* <div className="w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-600" /> */}
@@ -127,10 +155,23 @@ export default function Home() {
             <p className="text-lg text-gray-500 dark:text-gray-400">
               Digital Artisan (Developer/Designer/Visual)
             </p>
+            <p className="text-lg text-gray-500 dark:text-gray-400">
+              Me on <a href="https://www.linkedin.com/in/adam-firdaus-20758717b/" className='text-pink-500 dark:text-pink-400 underline'>LinkedIn</a>
+            </p>
           </div>
           <Image src={Img2} className="w-24 h-24 rounded-full bg-gray-300 dark:bg-gray-600 border-2 border-pink-500 dark:border-white" />
         </div>
-
+        <button
+          className="w-full bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700"
+          onClick={() => {
+            const link = document.createElement('a');
+            link.href = '/assets/cv-ats-adam.pdf';
+            link.download = 'Adam-Firdaus-CV.pdf';
+            link.click();
+          }}
+        >
+          👷‍♂️ Curriculum Vitae
+        </button>
         <div className="w-full">
           <p className="text-gray-600 dark:text-gray-400 text-justify pt-4 leading-loose">
             Currently, I'm working at AIA Singapore as Software Engineer/Analyst. Also, I am multidisciplinary Software Engineer with a strong command of both backend and frontend development. I also have experience in graphic design and UI design, allowing me to bridge the gap between functionality and aesthetics. Outside of tech, I’m passionate about video and photo editing, as well as videography and photography.
@@ -173,7 +214,6 @@ export default function Home() {
               )}
             </div>
           </section>
-          <button className='w-full bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700'>👷‍♂️ Portfolio</button>
         </div>
 
       </section>
@@ -301,9 +341,9 @@ export default function Home() {
             { videoId: "Ly4HBRLqQvo", title: "Demo Fitur Aplikasi LaporPak" },
             { videoId: "anZaBlhm5SY", title: "TechTips #2 : Screen Mirroring, Screen Recording HP Murah Cuma Butuh Kabel USB !" },
             { videoId: "vTDpQP0AyIs", title: "TechTips #1 : Cara Bongkar Laptop - 8 Menit Aja !" },
+            { videoId: "vTDpQP0AyIs", title: "TechTips #1 : Cara Bongkar Laptop - 8 Menit Aja !" },
             { videoId: "Ly4HBRLqQvo", title: "Demo Fitur Aplikasi LaporPak" },
             { videoId: "anZaBlhm5SY", title: "TechTips #2 : Screen Mirroring, Screen Recording HP Murah Cuma Butuh Kabel USB !" },
-            { videoId: "vTDpQP0AyIs", title: "TechTips #1 : Cara Bongkar Laptop - 8 Menit Aja !" }
           ].map((video, idx) => (
             <div key={idx} className="flex flex-col gap-2">
               <iframe
@@ -321,7 +361,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      
+
 
     </main>
   );
